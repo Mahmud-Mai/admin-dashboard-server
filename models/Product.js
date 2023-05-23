@@ -7,7 +7,8 @@ const ProductSchema = new mongoose.Schema({
     Category: String,
     Rating: Number,
     Supply: String,
-}, {timeStamps: true})
+}, {timestamps: true}
+)
 
 const Product = mongoose.model('Product', ProductSchema)
 export default Product

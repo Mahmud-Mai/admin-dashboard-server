@@ -17,7 +17,8 @@ const ProductStatSchema = new mongoose.Schema({
         totalSales: Number,
         totalUnits: Number
     }
-}, { timeStamps: true})
+}, { timestamps: true}
+)
 
 const ProductStat = new mongoose.model('ProductStat', ProductStatSchema)
 export default ProductStat
