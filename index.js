@@ -11,7 +11,7 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 /* One time bulk data imports */
-import Transaction from "./models/Transaction.js";
+// import Transaction from "./models/Transaction.js";
 // import User from "./models/User.js"
 // import Product from './models/Product.js'
 // import ProductStat from './models/ProductStat.js'
@@ -53,7 +53,7 @@ mongoose
     );
 
     /* Only Add data Once  */
-    // Transaction.insertMany(dataTransaction)
+    // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct)
     // ProductStat.insertMany(dataProductStat)
