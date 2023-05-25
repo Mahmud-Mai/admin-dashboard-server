@@ -1,24 +1,28 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const ProductStatSchema = new mongoose.Schema({
+const ProductStatSchema = new mongoose.Schema(
+  {
     productId: String,
     yearlySalesTotal: Number,
     yearlyTotalSoldUnits: Number,
     year: Number,
     monthlyData: [
-        {
-            month: String,
-            totalSales: Number,
-            totalUnits: Number,
-        }
+      {
+        month: String,
+        totalSales: Number,
+        totalUnits: Number,
+      },
     ],
-    dailyData: {
+    dailyData: [
+      {
         date: String,
         totalSales: Number,
-        totalUnits: Number
-    }
-}, { timestamps: true}
-)
+        totalUnits: Number,
+      },
+    ],
+  },
+  { timestamps: true }
+);
 
-const ProductStat = new mongoose.model('ProductStat', ProductStatSchema)
-export default ProductStat
+const ProductStat = new mongoose.model("ProductStat", ProductStatSchema);
+export default ProductStat;
